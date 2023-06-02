@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Doctrine\DBAL\Connection;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -14,23 +15,12 @@ class MainController
     }
 
     #[Route("/stations.json")]
-    public function stations()
+    public function stations(Connection $connection)
     {
+        $stations = $connection->fetchAllAssociative("SELECT * FROM stations");
+
         return new JsonResponse([
-            'list' => [
-                [
-                    'id' => 1,
-                    'name' => 'Station 1',
-                    'lat' => 33.5731104,
-                    'lng' => -7.5898434,
-                ],
-                [
-                    'id' => 2,
-                    'name' => 'Station 2',
-                    'lat' => 33.5731104,
-                    'lng' => -7.5898434,
-                ]
-            ]
+            'stations' => $stations,
         ]);
     }
 
