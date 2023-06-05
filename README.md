@@ -1,10 +1,16 @@
 # Backend
 
+## Prérequis
+
+- PHP >= 8.0
+- Composer
+- Base de données PostgreSQL
+
 ## Installation
 
 Installation des dépendances :
 ```
-composer install
+php composer.phar install
 ```
 
 Dupliquer le fichier `.env` en `.env.local` et ajuster la connexion SQL.
