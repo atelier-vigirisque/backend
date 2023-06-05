@@ -25,4 +25,10 @@ class MainController extends AbstractController
         ]);
     }
 
+    #[Route("/fail")]
+    public function fail()
+    {
+        undefinedFunction();
+    }
+
 }
