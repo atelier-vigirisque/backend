@@ -13,13 +13,13 @@ a2enmod rewrite
 
 Créer la configuration du site :
 ```
-nano /etc/apache2/sites-available/interface-client.conf
+nano /etc/apache2/sites-available/backend.conf
 ```
 
 ```
 <VirtualHost *:80>
     # Saisir le nom de domaine voulu
-    ServerName interface-client.local
+    ServerName backend.local
     DocumentRoot /var/www/backend/public
     <Directory /var/www/backend/public>
         AllowOverride All
@@ -49,8 +49,10 @@ Créer la base de données et choisir un mot de passe:
 su postgres
 psql
 CREATE DATABASE vigirisque;
-\passwd
+\password
 ```
+
+`ctrl+D` x2 pour quitter
 
 Cloner le projet :
 ```
