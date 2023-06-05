@@ -27,9 +27,9 @@ symfony server:start
 
 ## Webservices disponibles
 
-http://localhost:8000/
-http://localhost:8000/stations.json
+- http://localhost:8000/
+- http://localhost:8000/stations.json
 
 ## Installation en production
 
-[Documentation Debian 11](documentation/installation_debian11.md)
+[Documentation Debian 11](_documentation/installation_debian11.md)
