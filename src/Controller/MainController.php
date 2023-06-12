@@ -12,7 +12,7 @@ class MainController extends AbstractController
     #[Route("/")]
     public function home()
     {
-        return new JsonResponse(['message' => 'Hello from backend API']);
+        return new JsonResponse(['message' => 'Hello from backend API 2']);
     }
 
     #[Route("/stations.json")]
@@ -25,10 +25,5 @@ class MainController extends AbstractController
         ]);
     }
 
-    #[Route("/fail")]
-    public function fail()
-    {
-        undefinedFunction();
-    }
 
 }
